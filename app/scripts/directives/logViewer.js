@@ -441,7 +441,7 @@ angular.module('openshiftConsole')
                 // - kibanaArchiveUrl for the final destination once auth'd
                 angular.extend($scope, {
                   kibanaAuthUrl: $sce.trustAsResourceUrl(URI(url)
-                                                          .segment('auth').segment('token')
+                                                          .segment('oauth').segment('start')
                                                           .normalizePathname().toString()),
                   access_token: AuthService.UserStore().getToken()
                 });
